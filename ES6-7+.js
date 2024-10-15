@@ -55,8 +55,17 @@ let [firstName, lastName] = fullName; // destructuring
 
 //#endregion
 
-//#region Maps
+//#region Maps - Sets
 
+const cars = new Map();
+cars.set(1, "ferrari"); // key, value
 
+console.log(cars.get(1)); //getting key "1" value
+
+cars.size;
+cars.has(1); // boolean
+cars.delete(1);
+
+const workers = new Set(); //array with unique values
 
 //#endregion

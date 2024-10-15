@@ -32,6 +32,33 @@ function Quiz(quizText, answerOptions, correctAnswer) {
   this.correctAnswer = correctAnswer;
 }
 
-Quiz.prototype.checkAnswer = function (answer) { // Defining out of ctor in prototype
+Quiz.prototype.checkAnswer = function (answer) {
+  // Defining out of ctor in prototype
   return answer === this.correctAnswer;
 };
+
+// With ES6 'Class'
+class person {
+  //parent
+  constructor(name, job) {
+    this.name = name;
+    this.job = job;
+    console.log("Instance created ...");
+  }
+  // Getter - Setter Encapsulation
+  get name() {
+    return this._name;
+  }
+  set name(value) {
+    this._name = value;
+  }
+}
+
+// ▼ Inheritance ▼
+class personDerived extends person {
+  //child
+  constructor(name, job, number) {
+    super(name, job); //inheritance
+    this.number = number;
+  }
+}
